@@ -52,7 +52,7 @@ st.markdown(
 # LOGO + TÍTULO
 st.markdown('''
 <div class="logo-title">
-    <img src="https://raw.githubusercontent.com/seuusuario/seurepo/main/DZtech_Final.png">
+    <img src="https://raw.githubusercontent.com/DzaoGustavo/ia-investimentos-streamlit/main/DZtech_Final.png">
     <h1>DzTech Invest AI</h1>
 </div>
 ''', unsafe_allow_html=True)
