@@ -9,62 +9,32 @@ import plotly.graph_objs as go
 # CONFIGURAÇÃO DA PÁGINA
 st.set_page_config(page_title="DzTech Invest AI", layout="centered", page_icon="📈")
 
+# LOGO DA DZTECH CENTRALIZADO
+st.markdown("""
+    <div style="text-align: center; margin-bottom: 20px;">
+        <img src="https://raw.githubusercontent.com/DzaoGustavo/ia-investimentos-streamlit/main/DZtech_Final.png" alt="Logo DzTech" width="250">
+    </div>
+""", unsafe_allow_html=True)
+
 # CSS PERSONALIZADO
-st.markdown(
-    """
+st.markdown("""
     <style>
         body {
             background-color: #0f1117;
             color: #fafafa;
         }
-        .logo-title {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-        }
-        .logo-title img {
-            width: 90px;
-            margin-right: 1rem;
+        .stButton>button {
+            background-color: #1f77b4;
+            color: white;
+            font-weight: bold;
             border-radius: 8px;
         }
-        .logo-title h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-        }
-        .footer {
-            text-align: center;
-            font-size: 0.8rem;
-            margin-top: 3rem;
-            padding-top: 1rem;
-            border-top: 1px solid #333;
-            color: #888;
-        }
-        .footer a {
-            color: #bbb;
-            text-decoration: none;
-            margin: 0 10px;
+        .stButton>button:hover {
+            background-color: #105fa0;
         }
     </style>
-    """, unsafe_allow_html=True
-)
+""", unsafe_allow_html=True)
 
-# LOGO + TÍTULO
-st.markdown('''
-<div class="logo-title">
-    <img src="https://raw.githubusercontent.com/DzaoGustavo/ia-investimentos-streamlit/main/DZtech_Final.png">
-    <h1>DzTech Invest AI</h1>
-</div>
-''', unsafe_allow_html=True)
-
-st.markdown("🚀 IA que simula decisões de investimento com base no histórico de preços. Selecione um ativo, rode a IA e veja a previsão!")
-
-# INICIALIZA HISTÓRICO NA SESSÃO
-if "historico" not in st.session_state:
-    st.session_state.historico = []
-
-# LISTA DE ATIVOS DISPONÍVEIS
-ativos = {
-    "Petrobras (PETR4)": "PETR4.SA",
-    "Vale (VALE3)": "VALE3.SA",
-
+# TÍTULO
+st.title("😎 IA de Investimentos - Simulador Inteligente")
+st.write("Escolha um ativo, rode a IA e veja se ela **compr**
